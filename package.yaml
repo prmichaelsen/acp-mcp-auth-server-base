@@ -16,7 +16,8 @@ release:
 # Use @acp.pattern-create, @acp.command-create, @acp.design-create
 # These commands automatically update this section
 contents:
-  patterns: []
+  patterns:
+    - name: mcp-auth-server-base.server-wrapping.md
   
   commands: []
   

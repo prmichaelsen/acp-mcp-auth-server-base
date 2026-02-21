@@ -42,7 +42,7 @@ Or using the installation script:
 
 ### Patterns
 
-(No patterns yet - use @acp.pattern-create to add patterns)
+- **[Server Wrapping](agent/patterns/mcp-auth-server-base.server-wrapping.md)** - How to wrap MCP servers with authentication and multi-tenancy using wrapServer
 
 ### Designs
 
