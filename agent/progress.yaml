@@ -15,11 +15,11 @@ milestones:
   - id: M1
     name: Core Patterns and Designs
     status: in_progress
-    progress: 80
+    progress: 90
     started: 2026-02-21
     completed: null
     estimated_days: 2-3
-    tasks_completed: 8
+    tasks_completed: 9
     tasks_total: 10
     file: agent/milestones/milestone-1-core-patterns-and-designs.md
   
@@ -140,12 +140,13 @@ tasks:
     
     - id: task-9
       name: Create Security Design
-      status: not_started
+      status: completed
       file: agent/tasks/task-9-create-security-design.md
       estimated_hours: 3-4
-      completed_date: null
+      completed_date: 2026-02-21
       notes: |
-        Security considerations and best practices
+        ✅ Completed - Created comprehensive security design document
+        Security considerations and best practices for MCP auth servers
     
     - id: task-10
       name: Review and Validate All Patterns
@@ -157,7 +158,7 @@ tasks:
         Quality gate before Milestone 2
 
 documentation:
-  design_documents: 3
+  design_documents: 4
   milestone_documents: 4
   pattern_documents: 18
   task_documents: 10
@@ -166,19 +167,36 @@ documentation:
   last_updated: 2026-02-21
 
 progress:
-  planning: 80
-  implementation: 80
+  planning: 90
+  implementation: 90
   testing: 0
-  documentation: 80
-  overall: 80
+  documentation: 90
+  overall: 90
 
 recent_work:
+  - date: 2026-02-21
+    description: |
+      ✅ Task 9 Complete - Security Design
+      Created comprehensive security considerations design document.
+    items:
+      - ✅ Created agent/design/mcp-auth-server-base.security-considerations.md (800+ lines)
+      - ✅ Documented authentication security (JWT validation, token expiration, caching)
+      - ✅ Documented secret management (Secret Manager, rotation, environment variables)
+      - ✅ Documented multi-tenancy security (user isolation, database schema, per-user instances)
+      - ✅ Documented CORS security (origin validation, credentials, whitelisting)
+      - ✅ Documented input validation (schema validation, SQL injection, XSS, path traversal)
+      - ✅ Documented HTTPS requirements (TLS, certificates, HSTS)
+      - ✅ Documented additional measures (rate limiting, security headers, audit logging)
+      - ✅ Comprehensive security checklist with 40+ items
+      - ✅ Updated package.yaml with security design as install target
+      - ✅ Updated progress.yaml (M1: 90% complete, 9/10 tasks done)
+      - 📋 Ready for Task 10: Review and Validate Patterns
   - date: 2026-02-21
     description: |
       ✅ Task 8 Complete - Architecture Design
       Created comprehensive architecture design document for MCP auth servers.
     items:
-      - ✅ Created agent/design/architecture.md (900+ lines)
+      - ✅ Created agent/design/mcp-auth-server-base.architecture.md (900+ lines)
       - ✅ Documented overall system architecture with 6 layers
       - ✅ Created ASCII diagrams for component relationships and request flows
       - ✅ Documented authentication flow, tool execution flow, multi-tenancy isolation
@@ -188,7 +206,6 @@ recent_work:
       - ✅ Documented deployment architecture (Cloud Run, multi-region)
       - ✅ Documented security architecture with defense in depth
       - ✅ Updated progress.yaml (M1: 80% complete, 8/10 tasks done)
-      - 📋 Ready for Task 9: Security Design
   - date: 2026-02-21
     description: |
       ✅ Task 7 Complete - Testing Patterns

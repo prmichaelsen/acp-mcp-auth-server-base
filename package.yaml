@@ -40,6 +40,7 @@ contents:
   
   designs:
     - name: mcp-auth-server-base.architecture.md
+    - name: mcp-auth-server-base.security-considerations.md
 
 # Compatibility
 requires:
