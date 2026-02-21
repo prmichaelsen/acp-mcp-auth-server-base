@@ -18,6 +18,10 @@ release:
 contents:
   patterns:
     - name: mcp-auth-server-base.server-wrapping.md
+    - name: mcp-auth-server-base.auth-provider-jwt.md
+    - name: mcp-auth-server-base.auth-provider-oauth.md
+    - name: mcp-auth-server-base.auth-provider-apikey.md
+    - name: mcp-auth-server-base.auth-provider-env.md
   
   commands: []
   

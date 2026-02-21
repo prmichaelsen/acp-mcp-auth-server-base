@@ -15,11 +15,11 @@ milestones:
   - id: M1
     name: Core Patterns and Designs
     status: in_progress
-    progress: 10
+    progress: 20
     started: 2026-02-21
     completed: null
     estimated_days: 2-3
-    tasks_completed: 1
+    tasks_completed: 2
     tasks_total: 10
     file: agent/milestones/milestone-1-core-patterns-and-designs.md
   
@@ -70,12 +70,13 @@ tasks:
     
     - id: task-2
       name: Create Auth Provider Patterns
-      status: not_started
+      status: completed
       file: agent/tasks/task-2-create-auth-provider-patterns.md
       estimated_hours: 4-5
-      completed_date: null
+      completed_date: 2026-02-21
       notes: |
-        JWT, OAuth, API Key, Env patterns
+        ✅ Completed - Created 4 comprehensive auth provider patterns
+        JWT, OAuth, API Key, and Environment providers documented
     
     - id: task-3
       name: Create Token Resolver Pattern
@@ -152,7 +153,7 @@ tasks:
 documentation:
   design_documents: 2
   milestone_documents: 4
-  pattern_documents: 1
+  pattern_documents: 5
   task_documents: 10
   command_documents: 0
   clarification_documents: 1
@@ -160,12 +161,28 @@ documentation:
 
 progress:
   planning: 50
-  implementation: 10
+  implementation: 20
   testing: 0
-  documentation: 30
-  overall: 30
+  documentation: 35
+  overall: 35
 
 recent_work:
+  - date: 2026-02-21
+    description: |
+      ✅ Task 2 Complete - Auth Provider Patterns
+      Created 4 comprehensive auth provider pattern documents.
+    items:
+      - ✅ Created agent/patterns/mcp-auth-server-base.auth-provider-jwt.md (700+ lines)
+      - ✅ Created agent/patterns/mcp-auth-server-base.auth-provider-oauth.md (400+ lines)
+      - ✅ Created agent/patterns/mcp-auth-server-base.auth-provider-apikey.md (400+ lines)
+      - ✅ Created agent/patterns/mcp-auth-server-base.auth-provider-env.md (500+ lines)
+      - ✅ Documented JWT verification with caching and token forwarding
+      - ✅ Documented OAuth 2.0 flow with token refresh
+      - ✅ Documented API key validation with secure hashing
+      - ✅ Documented environment-based auth for development
+      - ✅ Updated package.yaml with 4 new patterns
+      - ✅ Updated progress.yaml (M1: 20% complete, 2/10 tasks done)
+      - 📋 Ready for Task 3: Token Resolver Pattern
   - date: 2026-02-21
     description: |
       ✅ Task 1 Complete - Server Wrapping Pattern
@@ -248,8 +265,8 @@ recent_work:
       - 📋 Ready to add content with entity creation commands
 
 next_steps:
-  - Begin Task 2: Create auth provider patterns (JWT, OAuth, API Key, Env)
-  - Continue with Tasks 3-10 for Milestone 1
+  - Begin Task 3: Create token resolver pattern
+  - Continue with Tasks 4-10 for Milestone 1
   - Use @acp.proceed to work through tasks systematically
   - After M1 complete, proceed to Milestone 2 (Commands)
   - Create templates in Milestone 3

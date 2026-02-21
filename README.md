@@ -43,6 +43,10 @@ Or using the installation script:
 ### Patterns
 
 - **[Server Wrapping](agent/patterns/mcp-auth-server-base.server-wrapping.md)** - How to wrap MCP servers with authentication and multi-tenancy using wrapServer
+- **[Auth Provider - JWT](agent/patterns/mcp-auth-server-base.auth-provider-jwt.md)** - JWT-based authentication with token verification and caching
+- **[Auth Provider - OAuth](agent/patterns/mcp-auth-server-base.auth-provider-oauth.md)** - OAuth 2.0 authentication with authorization code flow
+- **[Auth Provider - API Key](agent/patterns/mcp-auth-server-base.auth-provider-apikey.md)** - API key authentication for service-to-service communication
+- **[Auth Provider - Environment](agent/patterns/mcp-auth-server-base.auth-provider-env.md)** - Environment-based authentication for local development
 
 ### Designs
 
