@@ -7,11 +7,54 @@ project:
   type: package
   started: 2026-02-21
   status: in_progress
-  current_milestone: null
+  current_milestone: M1
   description: |
     ACP Package: Use with MCP server projects that depend on @prmichaelsen/mcp-auth.
 
-milestones: []
+milestones:
+  - id: M1
+    name: Core Patterns and Designs
+    status: not_started
+    progress: 0
+    started: null
+    completed: null
+    estimated_days: 2-3
+    tasks_completed: 0
+    tasks_total: 10
+    file: agent/milestones/milestone-1-core-patterns-and-designs.md
+  
+  - id: M2
+    name: Commands and Automation
+    status: not_started
+    progress: 0
+    started: null
+    completed: null
+    estimated_days: 3-4
+    tasks_completed: 0
+    tasks_total: 11
+    file: agent/milestones/milestone-2-commands-and-automation.md
+  
+  - id: M3
+    name: Templates and Configuration Files
+    status: not_started
+    progress: 0
+    started: null
+    completed: null
+    estimated_days: 3-4
+    tasks_completed: 0
+    tasks_total: 15
+    file: agent/milestones/milestone-3-templates-and-files.md
+  
+  - id: M4
+    name: Package Finalization and Testing
+    status: not_started
+    progress: 0
+    started: null
+    completed: null
+    estimated_days: 2-3
+    tasks_completed: 0
+    tasks_total: 12
+    file: agent/milestones/milestone-4-package-finalization.md
 
 tasks: {}
 
