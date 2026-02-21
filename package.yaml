@@ -1,0 +1,34 @@
+# package.yaml
+name: mcp-auth-server-base
+version: 1.0.0
+description: Use with MCP server projects that depend on @prmichaelsen/mcp-auth.
+author: Patrick Michaelsen
+license: MIT
+homepage: https://github.com/prmichaelsen/mcp-auth-server-base
+repository: https://github.com/prmichaelsen/acp-mcp-auth-server-base.git
+
+# Release configuration
+release:
+  branch: main
+
+# Package contents
+# Add files here as you create them
+# Use @acp.pattern-create, @acp.command-create, @acp.design-create
+# These commands automatically update this section
+contents:
+  patterns: []
+  
+  commands: []
+  
+  designs: []
+
+# Compatibility
+requires:
+  acp: >=2.8.0
+
+# Tags for discovery
+tags:
+  - mcp
+  - auth
+  - server
+  - starter
