@@ -29,6 +29,10 @@ contents:
     - name: mcp-auth-server-base.health-check.md
     - name: mcp-auth-server-base.cors-configuration.md
     - name: mcp-auth-server-base.environment-configuration.md
+    - name: mcp-auth-server-base.docker-multistage.md
+    - name: mcp-auth-server-base.cloud-build.md
+    - name: mcp-auth-server-base.cloud-run-deployment.md
+    - name: mcp-auth-server-base.secrets-management.md
   
   commands: []
   
