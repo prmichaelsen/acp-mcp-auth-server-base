@@ -56,38 +56,145 @@ milestones:
     tasks_total: 12
     file: agent/milestones/milestone-4-package-finalization.md
 
-tasks: {}
+tasks:
+  milestone_1:
+    - id: task-1
+      name: Create Server Wrapping Pattern
+      status: not_started
+      file: agent/tasks/task-1-create-server-wrapping-pattern.md
+      estimated_hours: 3-4
+      completed_date: null
+      notes: |
+        Extract from remember/task-mcp-server index.ts
+    
+    - id: task-2
+      name: Create Auth Provider Patterns
+      status: not_started
+      file: agent/tasks/task-2-create-auth-provider-patterns.md
+      estimated_hours: 4-5
+      completed_date: null
+      notes: |
+        JWT, OAuth, API Key, Env patterns
+    
+    - id: task-3
+      name: Create Token Resolver Pattern
+      status: not_started
+      file: agent/tasks/task-3-create-token-resolver-pattern.md
+      estimated_hours: 3-4
+      completed_date: null
+      notes: |
+        Extract from platform-token-resolver.ts
+    
+    - id: task-4
+      name: Create Static Server Pattern
+      status: not_started
+      file: agent/tasks/task-4-create-static-server-pattern.md
+      estimated_hours: 2-3
+      completed_date: null
+      notes: |
+        Document no-tokenResolver approach
+    
+    - id: task-5
+      name: Create Operational Patterns
+      status: not_started
+      file: agent/tasks/task-5-create-operational-patterns.md
+      estimated_hours: 5-6
+      completed_date: null
+      notes: |
+        Error handling, logging, health check, CORS, env config
+    
+    - id: task-6
+      name: Create Deployment Patterns
+      status: not_started
+      file: agent/tasks/task-6-create-deployment-patterns.md
+      estimated_hours: 5-6
+      completed_date: null
+      notes: |
+        Docker, Cloud Build, Cloud Run, secrets
+    
+    - id: task-7
+      name: Create Testing Patterns
+      status: not_started
+      file: agent/tasks/task-7-create-testing-patterns.md
+      estimated_hours: 3-4
+      completed_date: null
+      notes: |
+        Jest config, auth provider testing
+    
+    - id: task-8
+      name: Create Architecture Design
+      status: not_started
+      file: agent/tasks/task-8-create-architecture-design.md
+      estimated_hours: 3-4
+      completed_date: null
+      notes: |
+        Overall system design
+    
+    - id: task-9
+      name: Create Security Design
+      status: not_started
+      file: agent/tasks/task-9-create-security-design.md
+      estimated_hours: 3-4
+      completed_date: null
+      notes: |
+        Security considerations and best practices
+    
+    - id: task-10
+      name: Review and Validate All Patterns
+      status: not_started
+      file: agent/tasks/task-10-review-validate-patterns.md
+      estimated_hours: 2-3
+      completed_date: null
+      notes: |
+        Quality gate before Milestone 2
 
 documentation:
   design_documents: 2
-  milestone_documents: 0
+  milestone_documents: 4
   pattern_documents: 0
-  task_documents: 0
+  task_documents: 10
   command_documents: 0
   clarification_documents: 1
   last_updated: 2026-02-21
 
 progress:
-  planning: 25
+  planning: 50
   implementation: 0
   testing: 0
-  documentation: 15
-  overall: 15
+  documentation: 25
+  overall: 25
 
 recent_work:
+  - date: 2026-02-21
+    description: |
+      ✅ Milestone 1 Tasks Created
+      Created all 10 tasks for Milestone 1 (Core Patterns and Designs).
+    items:
+      - ✅ Created task-1-create-server-wrapping-pattern.md
+      - ✅ Created task-2-create-auth-provider-patterns.md
+      - ✅ Created task-3-create-token-resolver-pattern.md
+      - ✅ Created task-4-create-static-server-pattern.md
+      - ✅ Created task-5-create-operational-patterns.md
+      - ✅ Created task-6-create-deployment-patterns.md
+      - ✅ Created task-7-create-testing-patterns.md
+      - ✅ Created task-8-create-architecture-design.md
+      - ✅ Created task-9-create-security-design.md
+      - ✅ Created task-10-review-validate-patterns.md
+      - ✅ Updated progress.yaml with all M1 tasks
+      - 📋 Ready to begin Milestone 1 implementation
   - date: 2026-02-21
     description: |
       📝 Formal Requirements Document Created
       Comprehensive requirements specification based on clarification responses.
     items:
       - ✅ Reviewed clarification responses (~90% answered)
-      - ✅ Created formal requirements.md (14 sections, 500+ lines)
+      - ✅ Created formal requirements.md (14 sections, 666 lines)
       - ✅ Defined 3 server types (static, static_with_credentials, dynamic)
       - ✅ Specified 10+ commands to implement
       - ✅ Documented 12+ patterns to create
-      - ✅ Defined build system (esbuild), testing (Jest), deployment (Cloud Run)
+      - ✅ Defined build system (tsc for servers), testing (Jest), deployment (Cloud Run)
       - ✅ Specified project structure and dependencies
-      - 📋 Ready to create milestones and begin implementation
+      - ✅ Completed reference project investigation
   - date: 2026-02-21
     description: |
       � Requirements Analysis and Clarifications
@@ -126,16 +233,12 @@ recent_work:
       - 📋 Ready to add content with entity creation commands
 
 next_steps:
-  - Define milestones based on requirements
-  - Create initial patterns (server-wrapping, auth-providers, deployment)
-  - Create core commands (@mcp-auth-server-base.init, validate, deploy)
-  - Create configuration file templates (tsconfig.json, jest.config.js, Dockerfile)
-  - Create source file templates (src/index.ts.template, src/auth/provider.ts.template)
-  - Create scripts (upload-secrets.ts, test-auth.ts)
-  - Update package.yaml with include section
-  - Validate package with @acp.package-validate
-  - Test package installation
-  - Publish with @acp.package-publish
+  - Begin Task 1: Create server wrapping pattern
+  - Continue with Tasks 2-10 for Milestone 1
+  - Use @acp.proceed to work through tasks systematically
+  - After M1 complete, proceed to Milestone 2 (Commands)
+  - Create templates in Milestone 3
+  - Finalize and test in Milestone 4
 
 notes:
   - This is an ACP package repository
