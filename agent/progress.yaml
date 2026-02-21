@@ -15,11 +15,11 @@ milestones:
   - id: M1
     name: Core Patterns and Designs
     status: in_progress
-    progress: 40
+    progress: 50
     started: 2026-02-21
     completed: null
     estimated_days: 2-3
-    tasks_completed: 4
+    tasks_completed: 5
     tasks_total: 10
     file: agent/milestones/milestone-1-core-patterns-and-designs.md
   
@@ -100,12 +100,13 @@ tasks:
     
     - id: task-5
       name: Create Operational Patterns
-      status: not_started
+      status: completed
       file: agent/tasks/task-5-create-operational-patterns.md
       estimated_hours: 5-6
-      completed_date: null
+      completed_date: 2026-02-21
       notes: |
-        Error handling, logging, health check, CORS, env config
+        ✅ Completed - Created 5 comprehensive operational patterns
+        Error handling, logging, health check, CORS, environment configuration
     
     - id: task-6
       name: Create Deployment Patterns
@@ -155,7 +156,7 @@ tasks:
 documentation:
   design_documents: 2
   milestone_documents: 4
-  pattern_documents: 7
+  pattern_documents: 12
   task_documents: 10
   command_documents: 0
   clarification_documents: 1
@@ -163,12 +164,31 @@ documentation:
 
 progress:
   planning: 50
-  implementation: 40
+  implementation: 50
   testing: 0
-  documentation: 45
-  overall: 45
+  documentation: 50
+  overall: 50
 
 recent_work:
+  - date: 2026-02-21
+    description: |
+      ✅ Task 5 Complete - Operational Patterns
+      Created 5 comprehensive operational patterns for production-ready servers.
+    items:
+      - ✅ Created agent/patterns/mcp-auth-server-base.error-handling.md (800+ lines)
+      - ✅ Created agent/patterns/mcp-auth-server-base.logging.md (700+ lines)
+      - ✅ Created agent/patterns/mcp-auth-server-base.health-check.md (700+ lines)
+      - ✅ Created agent/patterns/mcp-auth-server-base.cors-configuration.md (700+ lines)
+      - ✅ Created agent/patterns/mcp-auth-server-base.environment-configuration.md (800+ lines)
+      - ✅ Documented error types, handling strategies, and recovery mechanisms
+      - ✅ Documented structured logging with pino, request logging, performance tracking
+      - ✅ Documented health check endpoints (liveness, readiness, detailed)
+      - ✅ Documented CORS configuration for SSE transport with security best practices
+      - ✅ Documented environment variable management with validation and type safety
+      - ✅ All patterns include examples, anti-patterns, testing, and best practices
+      - ✅ Updated package.yaml with 5 new patterns
+      - ✅ Updated progress.yaml (M1: 50% complete, 5/10 tasks done)
+      - 📋 Ready for Task 6: Deployment Patterns
   - date: 2026-02-21
     description: |
       ✅ Task 4 Complete - Static Server Pattern
@@ -184,7 +204,6 @@ recent_work:
       - ✅ Testing strategies with unit and integration tests
       - ✅ Updated package.yaml with new pattern
       - ✅ Updated progress.yaml (M1: 40% complete, 4/10 tasks done)
-      - 📋 Ready for Task 5: Operational Patterns
   - date: 2026-02-21
     description: |
       ✅ Task 3 Complete - Token Resolver Pattern
@@ -299,8 +318,8 @@ recent_work:
       - 📋 Ready to add content with entity creation commands
 
 next_steps:
-  - Begin Task 3: Create token resolver pattern
-  - Continue with Tasks 4-10 for Milestone 1
+  - Begin Task 6: Create deployment patterns (Docker, Cloud Build, Cloud Run, secrets)
+  - Continue with Tasks 7-10 for Milestone 1
   - Use @acp.proceed to work through tasks systematically
   - After M1 complete, proceed to Milestone 2 (Commands)
   - Create templates in Milestone 3

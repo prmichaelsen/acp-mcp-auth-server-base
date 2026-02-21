@@ -24,6 +24,11 @@ contents:
     - name: mcp-auth-server-base.auth-provider-env.md
     - name: mcp-auth-server-base.token-resolver.md
     - name: mcp-auth-server-base.static-server.md
+    - name: mcp-auth-server-base.error-handling.md
+    - name: mcp-auth-server-base.logging.md
+    - name: mcp-auth-server-base.health-check.md
+    - name: mcp-auth-server-base.cors-configuration.md
+    - name: mcp-auth-server-base.environment-configuration.md
   
   commands: []
   
