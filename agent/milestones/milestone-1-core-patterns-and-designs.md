@@ -49,12 +49,12 @@ This milestone establishes the core documentation and patterns that will guide u
 
 ## Success Criteria
 
-- [ ] All 12+ patterns documented in `agent/patterns/`
-- [ ] Each pattern includes overview, implementation, examples, and anti-patterns
-- [ ] Patterns reference actual code from reference projects
-- [ ] Design documents provide architectural guidance
-- [ ] All patterns are generic (no project-specific references)
-- [ ] Patterns follow ACP pattern template structure
+- [x] All 12+ patterns documented in `agent/patterns/` (18 created)
+- [x] Each pattern includes overview, implementation, examples, and anti-patterns
+- [x] Patterns reference actual code from reference projects
+- [x] Design documents provide architectural guidance
+- [x] All patterns are generic (no project-specific references)
+- [x] Patterns follow ACP pattern template structure
 
 ---
 
