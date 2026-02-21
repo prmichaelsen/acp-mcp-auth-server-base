@@ -15,11 +15,11 @@ milestones:
   - id: M1
     name: Core Patterns and Designs
     status: in_progress
-    progress: 20
+    progress: 30
     started: 2026-02-21
     completed: null
     estimated_days: 2-3
-    tasks_completed: 2
+    tasks_completed: 3
     tasks_total: 10
     file: agent/milestones/milestone-1-core-patterns-and-designs.md
   
@@ -80,12 +80,13 @@ tasks:
     
     - id: task-3
       name: Create Token Resolver Pattern
-      status: not_started
+      status: completed
       file: agent/tasks/task-3-create-token-resolver-pattern.md
       estimated_hours: 3-4
-      completed_date: null
+      completed_date: 2026-02-21
       notes: |
-        Extract from platform-token-resolver.ts
+        ✅ Completed - Created comprehensive token resolver pattern
+        Extracted from remember-mcp-server platform-token-resolver.ts
     
     - id: task-4
       name: Create Static Server Pattern
@@ -153,7 +154,7 @@ tasks:
 documentation:
   design_documents: 2
   milestone_documents: 4
-  pattern_documents: 5
+  pattern_documents: 6
   task_documents: 10
   command_documents: 0
   clarification_documents: 1
@@ -161,12 +162,28 @@ documentation:
 
 progress:
   planning: 50
-  implementation: 20
+  implementation: 30
   testing: 0
-  documentation: 35
-  overall: 35
+  documentation: 40
+  overall: 40
 
 recent_work:
+  - date: 2026-02-21
+    description: |
+      ✅ Task 3 Complete - Token Resolver Pattern
+      Created comprehensive token resolver pattern for dynamic credential fetching.
+    items:
+      - ✅ Created agent/patterns/mcp-auth-server-base.token-resolver.md (600+ lines)
+      - ✅ Documented on-demand credential fetching from platform APIs
+      - ✅ Token caching with 5-minute TTL for performance
+      - ✅ JWT forwarding for platform authentication
+      - ✅ Graceful handling of missing credentials
+      - ✅ Complete testing strategies with unit tests
+      - ✅ 4 anti-patterns with corrections
+      - ✅ Platform credentials API specification
+      - ✅ Updated package.yaml with new pattern
+      - ✅ Updated progress.yaml (M1: 30% complete, 3/10 tasks done)
+      - 📋 Ready for Task 4: Static Server Pattern
   - date: 2026-02-21
     description: |
       ✅ Task 2 Complete - Auth Provider Patterns

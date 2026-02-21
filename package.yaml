@@ -22,6 +22,7 @@ contents:
     - name: mcp-auth-server-base.auth-provider-oauth.md
     - name: mcp-auth-server-base.auth-provider-apikey.md
     - name: mcp-auth-server-base.auth-provider-env.md
+    - name: mcp-auth-server-base.token-resolver.md
   
   commands: []
   

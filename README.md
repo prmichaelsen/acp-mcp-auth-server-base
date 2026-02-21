@@ -47,6 +47,7 @@ Or using the installation script:
 - **[Auth Provider - OAuth](agent/patterns/mcp-auth-server-base.auth-provider-oauth.md)** - OAuth 2.0 authentication with authorization code flow
 - **[Auth Provider - API Key](agent/patterns/mcp-auth-server-base.auth-provider-apikey.md)** - API key authentication for service-to-service communication
 - **[Auth Provider - Environment](agent/patterns/mcp-auth-server-base.auth-provider-env.md)** - Environment-based authentication for local development
+- **[Token Resolver](agent/patterns/mcp-auth-server-base.token-resolver.md)** - Dynamic per-user credential fetching from platform APIs
 
 ### Designs
 
