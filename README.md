@@ -48,6 +48,7 @@ Or using the installation script:
 - **[Auth Provider - API Key](agent/patterns/mcp-auth-server-base.auth-provider-apikey.md)** - API key authentication for service-to-service communication
 - **[Auth Provider - Environment](agent/patterns/mcp-auth-server-base.auth-provider-env.md)** - Environment-based authentication for local development
 - **[Token Resolver](agent/patterns/mcp-auth-server-base.token-resolver.md)** - Dynamic per-user credential fetching from platform APIs
+- **[Static Server](agent/patterns/mcp-auth-server-base.static-server.md)** - Servers without per-user credentials (pure static and static_with_credentials)
 
 ### Designs
 
