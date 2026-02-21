@@ -33,6 +33,8 @@ contents:
     - name: mcp-auth-server-base.cloud-build.md
     - name: mcp-auth-server-base.cloud-run-deployment.md
     - name: mcp-auth-server-base.secrets-management.md
+    - name: mcp-auth-server-base.jest-configuration.md
+    - name: mcp-auth-server-base.testing-auth-providers.md
   
   commands: []
   
