@@ -38,7 +38,8 @@ contents:
   
   commands: []
   
-  designs: []
+  designs:
+    - name: mcp-auth-server-base.architecture.md
 
 # Compatibility
 requires:
