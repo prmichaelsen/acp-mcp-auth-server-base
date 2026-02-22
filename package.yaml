@@ -43,6 +43,10 @@ contents:
     - name: mcp-auth-server-base.setup-secrets.md
     - name: mcp-auth-server-base.logs.md
     - name: mcp-auth-server-base.generate-dockerfile.md
+    - name: mcp-auth-server-base.generate-cloudbuild.md
+    - name: mcp-auth-server-base.add-auth-provider.md
+    - name: mcp-auth-server-base.mcp-auth-version-check.md
+    - name: mcp-auth-server-base.mcp-auth-version-update.md
   
   scripts:
     - name: mcp-auth-server-base.validate.sh
