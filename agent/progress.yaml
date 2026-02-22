@@ -26,11 +26,11 @@ milestones:
   - id: M2
     name: Commands and Automation
     status: in_progress
-    progress: 27
+    progress: 55
     started: 2026-02-22
     completed: null
     estimated_days: 3-4
-    tasks_completed: 3
+    tasks_completed: 6
     tasks_total: 11
     file: agent/milestones/milestone-2-commands-and-automation.md
   
@@ -192,33 +192,33 @@ tasks:
     
     - id: task-14
       name: Create @mcp-auth-server-base.setup-secrets Command
-      status: not_started
+      status: completed
       file: agent/tasks/milestone-2-commands-and-automation/task-14-create-setup-secrets-command.md
       estimated_hours: 3-4
-      completed_date: null
+      completed_date: 2026-02-22
       notes: |
-        Helps users set up secrets in Google Cloud Secret Manager
-        Guides through creating and uploading secrets for deployment
+        ✅ Completed - Created comprehensive setup-secrets command (900+ lines)
+        Automates secrets setup in Google Cloud Secret Manager
     
     - id: task-15
       name: Create @mcp-auth-server-base.logs Command
-      status: not_started
+      status: completed
       file: agent/tasks/milestone-2-commands-and-automation/task-15-create-logs-command.md
       estimated_hours: 2-3
-      completed_date: null
+      completed_date: 2026-02-22
       notes: |
-        Fetches and displays logs from deployed Cloud Run service
-        Supports filtering by severity, time, and search terms
+        ✅ Completed - Created comprehensive logs command (650+ lines)
+        Fetches and displays Cloud Run logs with filtering
     
     - id: task-16
       name: Create @mcp-auth-server-base.generate-dockerfile Command
-      status: not_started
+      status: completed
       file: agent/tasks/milestone-2-commands-and-automation/task-16-create-generate-dockerfile-command.md
       estimated_hours: 2-3
-      completed_date: null
+      completed_date: 2026-02-22
       notes: |
-        Generates or regenerates Dockerfile configurations
-        Supports development and production multi-stage builds
+        ✅ Completed - Created comprehensive generate-dockerfile command
+        Generates Dockerfile.development, Dockerfile.production, and .dockerignore
     
     - id: task-17
       name: Create @mcp-auth-server-base.generate-cloudbuild Command
@@ -520,7 +520,7 @@ documentation:
   milestone_documents: 4
   pattern_documents: 18
   task_documents: 48
-  command_documents: 2
+  command_documents: 6
   script_documents: 1
   clarification_documents: 1
   last_updated: 2026-02-22
@@ -533,6 +533,81 @@ progress:
   overall: 100
 
 recent_work:
+  - date: 2026-02-22
+    description: |
+      ✅ Task 16 Complete - Create @mcp-auth-server-base.generate-dockerfile Command
+      ✅ Milestone 2 Progress - Commands and Automation (55% complete, 6/11 tasks)
+      Created comprehensive Dockerfile generation command for development and production.
+    items:
+      - ✅ Created agent/commands/mcp-auth-server-base.generate-dockerfile.md (1,097 lines)
+      - ✅ Documented complete Dockerfile generation workflow
+      - ✅ Supports 4 generation targets (dev only, prod only, both, all)
+      - ✅ Generates Dockerfile.development (single-stage, hot reload)
+      - ✅ Generates Dockerfile.production (multi-stage, optimized)
+      - ✅ Generates .dockerignore (build exclusions)
+      - ✅ Overwrite protection with confirmation
+      - ✅ Six customization options (Node version, port, health check, build steps, dependencies, build args)
+      - ✅ Four complete examples (first time, regenerate, custom version, custom build steps)
+      - ✅ Eight troubleshooting scenarios
+      - ✅ Advanced usage (multi-platform, cache mounts, secrets, Docker Compose)
+      - ✅ Security considerations (non-root, no secrets, scanning)
+      - ✅ References to Docker and deployment patterns
+      - ✅ Updated package.yaml with generate-dockerfile command
+      - ✅ Updated progress.yaml (M2: 55% complete, 6/11 tasks done)
+      - ✅ Milestone 2 IN PROGRESS
+      - 📋 Ready for Task 17: Create @mcp-auth-server-base.generate-cloudbuild command
+  - date: 2026-02-22
+    description: |
+      ✅ Task 15 Complete - Create @mcp-auth-server-base.logs Command
+      ✅ Milestone 2 Progress - Commands and Automation (45% complete, 5/11 tasks)
+      Created comprehensive logs viewing command for Cloud Run services.
+    items:
+      - ✅ Created agent/commands/mcp-auth-server-base.logs.md (650+ lines)
+      - ✅ Documented complete log fetching workflow
+      - ✅ Service identification and verification
+      - ✅ Log fetching from Cloud Logging API
+      - ✅ Filtering and formatting with color coding
+      - ✅ Multiple filtering options (severity, time, search, limit)
+      - ✅ Severity levels: CRITICAL, ERROR, WARNING, INFO, DEBUG
+      - ✅ Time range filters (s, m, h, d)
+      - ✅ Search term filtering
+      - ✅ Combined filter support
+      - ✅ Four complete examples (recent logs, errors, search, combined)
+      - ✅ Advanced usage (streaming, export, Cloud Console)
+      - ✅ Four troubleshooting scenarios
+      - ✅ Security considerations (read-only, sensitive data warnings)
+      - ✅ References to logging and Cloud Run patterns
+      - ✅ Updated package.yaml with logs command
+      - ✅ Updated progress.yaml (M2: 45% complete, 5/11 tasks done)
+      - ✅ Milestone 2 IN PROGRESS
+      - 📋 Ready for Task 16: Create @mcp-auth-server-base.generate-dockerfile command
+  - date: 2026-02-22
+    description: |
+      ✅ Task 14 Complete - Create @mcp-auth-server-base.setup-secrets Command
+      ✅ Milestone 2 Progress - Commands and Automation (36% complete, 4/11 tasks)
+      Created comprehensive secrets setup command for Google Cloud Secret Manager.
+    items:
+      - ✅ Created agent/commands/mcp-auth-server-base.setup-secrets.md (900+ lines)
+      - ✅ Documented complete 7-step secrets setup workflow
+      - ✅ Prerequisites check (gcloud, auth, API, permissions)
+      - ✅ Identify required secrets from .env file
+      - ✅ Apply naming convention ({service-name}-{secret-name})
+      - ✅ Create secrets in Secret Manager
+      - ✅ Upload secret values (masked input)
+      - ✅ Set access control for Cloud Run service account
+      - ✅ Verification and deployment-ready references
+      - ✅ Three modes: Interactive, Batch, Update
+      - ✅ Interactive mode with masked input prompts
+      - ✅ Batch mode for CI/CD (reads from .env)
+      - ✅ Update mode for rotating secrets
+      - ✅ Three complete examples (first-time, update, CI/CD)
+      - ✅ Eight troubleshooting scenarios
+      - ✅ Security considerations (never display secrets, mask input)
+      - ✅ References all relevant patterns
+      - ✅ Updated package.yaml with setup-secrets command
+      - ✅ Updated progress.yaml (M2: 36% complete, 4/11 tasks done)
+      - ✅ Milestone 2 IN PROGRESS
+      - 📋 Ready for Task 15: Create @mcp-auth-server-base.logs command
   - date: 2026-02-22
     description: |
       ✅ Task 13 Complete - Create @mcp-auth-server-base.deploy Command
@@ -859,12 +934,11 @@ recent_work:
       - 📋 Ready to add content with entity creation commands
 
 next_steps:
-  - Implement Task 14: @mcp-auth-server-base.setup-secrets command
-  - Implement Task 15: @mcp-auth-server-base.logs command
-  - Implement Tasks 16-18: Generation and provider commands
+  - Implement Task 17: @mcp-auth-server-base.generate-cloudbuild command
+  - Implement Task 18: @mcp-auth-server-base.add-auth-provider command
   - Implement Tasks 19-20: Maintenance commands
   - Execute Task 21: Test all commands manually (quality gate)
-  - Complete Milestone 2 (21/21 tasks)
+  - Complete Milestone 2 (5 tasks remaining)
   - Proceed to Milestone 3: Templates and Configuration Files
 
 notes:

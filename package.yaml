@@ -40,6 +40,9 @@ contents:
     - name: mcp-auth-server-base.init.md
     - name: mcp-auth-server-base.validate.md
     - name: mcp-auth-server-base.deploy.md
+    - name: mcp-auth-server-base.setup-secrets.md
+    - name: mcp-auth-server-base.logs.md
+    - name: mcp-auth-server-base.generate-dockerfile.md
   
   scripts:
     - name: mcp-auth-server-base.validate.sh

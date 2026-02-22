@@ -46,8 +46,41 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Rollback procedures (quick, gradual, emergency)
   - 8 troubleshooting scenarios with solutions
   - 1225 lines of comprehensive documentation
-- Task 11, 12, and 13 documents for command creation
-- Milestone 2 started (Commands and Automation) - 27% complete (3/11 tasks)
+- **@mcp-auth-server-base.setup-secrets command** - Automated secrets setup in Google Cloud Secret Manager
+  - Complete 7-step secrets setup workflow
+  - Three operating modes: Interactive, Batch, Update
+  - Interactive mode with masked input prompts
+  - Batch mode for CI/CD (reads from .env)
+  - Update mode for rotating secrets
+  - Naming convention enforcement ({service-name}-{secret-name})
+  - Access control configuration for Cloud Run service account
+  - 3 complete examples (first-time, update, CI/CD)
+  - 8 troubleshooting scenarios
+  - Security considerations (never display secrets, mask input)
+  - 978 lines of comprehensive documentation
+- **@mcp-auth-server-base.logs command** - Cloud Run log viewing and filtering
+  - Multiple filtering options (severity, time, search, limit)
+  - Severity levels: CRITICAL, ERROR, WARNING, INFO, DEBUG
+  - Time range filters (s, m, h, d)
+  - Search term filtering with combined filter support
+  - Color-coded output by severity level
+  - 4 complete examples (recent logs, errors, search, combined)
+  - Advanced usage (streaming, export, Cloud Console)
+  - 4 troubleshooting scenarios
+  - 704 lines of comprehensive documentation
+- **@mcp-auth-server-base.generate-dockerfile command** - Dockerfile generation for development and production
+  - Generates Dockerfile.development (single-stage, hot reload)
+  - Generates Dockerfile.production (multi-stage, optimized, non-root user)
+  - Generates .dockerignore (comprehensive exclusions)
+  - Supports 4 generation targets (dev only, prod only, both, all)
+  - Overwrite protection with confirmation
+  - 6 customization options (Node version, port, health check, build steps, runtime deps, build args)
+  - 4 complete examples (first time, regenerate, custom version, custom build steps)
+  - 8 troubleshooting scenarios
+  - Advanced usage (multi-platform builds, cache mounts, Docker Compose)
+  - 1096 lines of comprehensive documentation
+- Task documents for command creation (Tasks 11-16)
+- Milestone 2 progress (Commands and Automation) - 55% complete (6/11 tasks)
 
 ### Changed
 - Updated to ACP 3.7.1 (from 3.6.0)
