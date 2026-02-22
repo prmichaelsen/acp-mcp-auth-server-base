@@ -1,6 +1,6 @@
 # package.yaml
 name: mcp-auth-server-base
-version: 1.0.0
+version: 1.1.0
 description: Use with MCP server projects that depend on @prmichaelsen/mcp-auth.
 author: Patrick Michaelsen
 license: MIT
@@ -36,7 +36,8 @@ contents:
     - name: mcp-auth-server-base.jest-configuration.md
     - name: mcp-auth-server-base.testing-auth-providers.md
   
-  commands: []
+  commands:
+    - name: mcp-auth-server-base.init.md
   
   designs:
     - name: mcp-auth-server-base.architecture.md

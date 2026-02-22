@@ -3,7 +3,7 @@
 
 project:
   name: mcp-auth-server-base
-  version: 1.0.0
+  version: 1.1.0
   type: package
   started: 2026-02-21
   status: in_progress
@@ -25,12 +25,12 @@ milestones:
   
   - id: M2
     name: Commands and Automation
-    status: not_started
-    progress: 0
-    started: null
+    status: in_progress
+    progress: 9
+    started: 2026-02-22
     completed: null
     estimated_days: 3-4
-    tasks_completed: 0
+    tasks_completed: 1
     tasks_total: 11
     file: agent/milestones/milestone-2-commands-and-automation.md
   
@@ -158,14 +158,26 @@ tasks:
         ✅ Completed - Reviewed and validated all 18 patterns and 4 designs
         Quality gate passed - ready for Milestone 2
 
+tasks:
+  milestone_2:
+    - id: task-11
+      name: Create @mcp-auth-server-base.init Command
+      status: completed
+      file: agent/tasks/task-11-create-init-command.md
+      estimated_hours: 4-5
+      completed_date: 2026-02-22
+      notes: |
+        ✅ Completed - Created comprehensive init command (1500+ lines)
+        Most critical command in the package - guides users through project setup
+
 documentation:
   design_documents: 4
   milestone_documents: 4
   pattern_documents: 18
-  task_documents: 10
-  command_documents: 0
+  task_documents: 11
+  command_documents: 1
   clarification_documents: 1
-  last_updated: 2026-02-21
+  last_updated: 2026-02-22
 
 progress:
   planning: 100
@@ -175,6 +187,33 @@ progress:
   overall: 100
 
 recent_work:
+  - date: 2026-02-22
+    description: |
+      ✅ Task 11 Complete - Create @mcp-auth-server-base.init Command
+      ✅ Milestone 2 Started - Commands and Automation (9% complete, 1/11 tasks)
+      Created the most critical command in the package - comprehensive init workflow.
+    items:
+      - ✅ Created agent/tasks/task-11-create-init-command.md (comprehensive task document)
+      - ✅ Created agent/commands/mcp-auth-server-base.init.md (1500+ lines)
+      - ✅ Documented 18-step interactive initialization workflow
+      - ✅ Covers all 3 server types (static, static_with_credentials, dynamic)
+      - ✅ Covers all 4 auth providers (JWT, OAuth, API Key, Environment)
+      - ✅ Generates complete project structure (20+ files)
+      - ✅ Includes package.json, tsconfig.json, jest.config.js, esbuild scripts
+      - ✅ Generates source files customized to user selections
+      - ✅ Generates Docker files (development & production multi-stage)
+      - ✅ Generates Cloud Build configuration with secrets management
+      - ✅ Generates utility scripts (upload-secrets.ts, test-auth.ts)
+      - ✅ Initializes git repository with proper .gitignore
+      - ✅ Creates comprehensive README.md
+      - ✅ Includes 3 complete examples (calculator, Brave Search, GitHub)
+      - ✅ Includes 7 troubleshooting scenarios
+      - ✅ References all 18 patterns from Milestone 1
+      - ✅ Comprehensive security considerations documented
+      - ✅ Updated package.yaml with new command
+      - ✅ Updated progress.yaml (M2: 9% complete, 1/11 tasks done)
+      - ✅ Milestone 2 IN PROGRESS
+      - 📋 Ready for Task 12: Create @mcp-auth-server-base.validate command
   - date: 2026-02-21
     description: |
       ✅ Task 10 Complete - Review and Validate All Patterns
@@ -403,11 +442,12 @@ recent_work:
       - 📋 Ready to add content with entity creation commands
 
 next_steps:
-  - Begin Task 7: Create testing patterns (Jest config, auth provider testing)
-  - Continue with Tasks 8-10 for Milestone 1
-  - Use @acp.proceed to work through tasks systematically
-  - After M1 complete, proceed to Milestone 2 (Commands)
-  - Create templates in Milestone 3
+  - Create Task 12: @mcp-auth-server-base.validate command
+  - Create Task 13: @mcp-auth-server-base.deploy command
+  - Create Task 14: @mcp-auth-server-base.setup-secrets command
+  - Create Task 15: @mcp-auth-server-base.logs command
+  - Continue with remaining Milestone 2 commands (generation, maintenance)
+  - After M2 complete, proceed to Milestone 3 (Templates)
   - Finalize and test in Milestone 4
 
 notes:
