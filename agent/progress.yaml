@@ -31,7 +31,7 @@ milestones:
     completed: null
     estimated_days: 3-4
     tasks_completed: 1
-    tasks_total: 11
+    tasks_total: 13
     file: agent/milestones/milestone-2-commands-and-automation.md
   
   - id: M3
@@ -169,12 +169,32 @@ tasks:
       notes: |
         ✅ Completed - Created comprehensive init command (1500+ lines)
         Most critical command in the package - guides users through project setup
+    
+    - id: task-12
+      name: Create @mcp-auth-server-base.validate Command
+      status: not_started
+      file: agent/tasks/task-12-create-validate-command.md
+      estimated_hours: 3-4
+      completed_date: null
+      notes: |
+        Validates project configuration, dependencies, and structure
+        Ensures projects are ready for development and deployment
+    
+    - id: task-13
+      name: Create @mcp-auth-server-base.deploy Command
+      status: not_started
+      file: agent/tasks/task-13-create-deploy-command.md
+      estimated_hours: 4-5
+      completed_date: null
+      notes: |
+        Deploys MCP auth server to Google Cloud Run
+        Handles Docker build, push, and Cloud Run deployment
 
 documentation:
   design_documents: 4
   milestone_documents: 4
   pattern_documents: 18
-  task_documents: 11
+  task_documents: 13
   command_documents: 1
   clarification_documents: 1
   last_updated: 2026-02-22
