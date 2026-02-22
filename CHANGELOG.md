@@ -24,8 +24,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - 7 troubleshooting scenarios documented
   - References all 18 patterns from Milestone 1
   - 1517 lines of comprehensive documentation
-- Task 11 document for init command creation
-- Milestone 2 started (Commands and Automation)
+- **@mcp-auth-server-base.validate command** - Comprehensive project validation system
+  - Validation script with 10 validation categories
+  - Three validation levels: quick (~30s), standard (~2-3m), full (~5-10m)
+  - Color-coded output with success rate percentage
+  - Automatic remediation suggestions for failures
+  - 900+ line validation script with systematic checks
+  - 1100+ line command document with detailed instructions
+- **@mcp-auth-server-base.deploy command** - Automated deployment to Google Cloud Run
+  - Complete 7-step deployment workflow
+  - Pre-deployment validation (gcloud, auth, APIs)
+  - Environment selection (dev/staging/production)
+  - Docker image build with multi-tagging (SHA, latest, environment)
+  - Container Registry push with authentication
+  - Cloud Run deployment with full configuration
+  - Secrets integration from Secret Manager
+  - Deployment verification with health checks
+  - Three deployment options: Quick (~2-3m), Full (~5-10m), Cloud Build (~10-15m)
+  - Complete configuration options (resources, scaling, access)
+  - 4 complete examples (first deploy, update, Cloud Build, multi-region)
+  - Rollback procedures (quick, gradual, emergency)
+  - 8 troubleshooting scenarios with solutions
+  - 1225 lines of comprehensive documentation
+- Task 11, 12, and 13 documents for command creation
+- Milestone 2 started (Commands and Automation) - 27% complete (3/11 tasks)
 
 ### Changed
 - Updated to ACP 3.7.1 (from 3.6.0)

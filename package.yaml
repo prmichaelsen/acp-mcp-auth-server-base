@@ -39,6 +39,7 @@ contents:
   commands:
     - name: mcp-auth-server-base.init.md
     - name: mcp-auth-server-base.validate.md
+    - name: mcp-auth-server-base.deploy.md
   
   scripts:
     - name: mcp-auth-server-base.validate.sh

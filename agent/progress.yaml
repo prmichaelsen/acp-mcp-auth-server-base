@@ -26,11 +26,11 @@ milestones:
   - id: M2
     name: Commands and Automation
     status: in_progress
-    progress: 18
+    progress: 27
     started: 2026-02-22
     completed: null
     estimated_days: 3-4
-    tasks_completed: 2
+    tasks_completed: 3
     tasks_total: 11
     file: agent/milestones/milestone-2-commands-and-automation.md
   
@@ -182,13 +182,13 @@ tasks:
     
     - id: task-13
       name: Create @mcp-auth-server-base.deploy Command
-      status: not_started
+      status: completed
       file: agent/tasks/milestone-2-commands-and-automation/task-13-create-deploy-command.md
       estimated_hours: 4-5
-      completed_date: null
+      completed_date: 2026-02-22
       notes: |
-        Deploys MCP auth server to Google Cloud Run
-        Handles Docker build, push, and Cloud Run deployment
+        ✅ Completed - Created comprehensive deploy command (1200+ lines)
+        Automates complete deployment workflow to Google Cloud Run
     
     - id: task-14
       name: Create @mcp-auth-server-base.setup-secrets Command
@@ -535,6 +535,34 @@ progress:
 recent_work:
   - date: 2026-02-22
     description: |
+      ✅ Task 13 Complete - Create @mcp-auth-server-base.deploy Command
+      ✅ Milestone 2 Progress - Commands and Automation (27% complete, 3/11 tasks)
+      Created comprehensive deployment command for Google Cloud Run.
+    items:
+      - ✅ Created agent/commands/mcp-auth-server-base.deploy.md (1200+ lines)
+      - ✅ Documented complete 7-step deployment workflow
+      - ✅ Pre-deployment validation (gcloud, auth, APIs)
+      - ✅ Environment selection (dev/staging/production)
+      - ✅ Docker image build with multi-tagging (SHA, latest, environment)
+      - ✅ Container Registry push with authentication
+      - ✅ Cloud Run deployment with full configuration
+      - ✅ Secrets integration from Secret Manager
+      - ✅ Deployment verification with health checks
+      - ✅ Post-deployment actions and next steps
+      - ✅ Three deployment options (Quick, Full, Cloud Build)
+      - ✅ Complete configuration options (resources, scaling, access)
+      - ✅ Secrets management documentation
+      - ✅ Four complete examples (first deploy, update, Cloud Build, multi-region)
+      - ✅ Comprehensive rollback procedures (quick, gradual, emergency)
+      - ✅ Eight troubleshooting scenarios
+      - ✅ Security considerations documented
+      - ✅ References all relevant patterns
+      - ✅ Updated package.yaml with deploy command
+      - ✅ Updated progress.yaml (M2: 27% complete, 3/11 tasks done)
+      - ✅ Milestone 2 IN PROGRESS
+      - 📋 Ready for Task 14: Create @mcp-auth-server-base.setup-secrets command
+  - date: 2026-02-22
+    description: |
       ✅ Task 12 Complete - Create @mcp-auth-server-base.validate Command
       ✅ Milestone 2 Progress - Commands and Automation (18% complete, 2/11 tasks)
       Created comprehensive validation system with script and command document.
@@ -831,9 +859,9 @@ recent_work:
       - 📋 Ready to add content with entity creation commands
 
 next_steps:
-  - Implement Task 13: @mcp-auth-server-base.deploy command
   - Implement Task 14: @mcp-auth-server-base.setup-secrets command
-  - Implement Tasks 14-18: Deployment and generation commands
+  - Implement Task 15: @mcp-auth-server-base.logs command
+  - Implement Tasks 16-18: Generation and provider commands
   - Implement Tasks 19-20: Maintenance commands
   - Execute Task 21: Test all commands manually (quality gate)
   - Complete Milestone 2 (21/21 tasks)
