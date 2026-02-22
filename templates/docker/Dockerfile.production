@@ -1,0 +1,76 @@
+# Dockerfile.production
+# Multi-stage production build optimized for size and security
+
+# ============================================
+# Builder Stage
+# ============================================
+FROM node:20-alpine AS builder
+
+# Install security updates
+RUN apk update && apk upgrade
+
+# Set working directory
+WORKDIR /app
+
+# Copy package files
+COPY package*.json ./
+
+# Install ALL dependencies (including devDependencies for build)
+RUN npm ci
+
+# Copy source code
+COPY . .
+
+# Build TypeScript
+RUN npm run build
+
+# ============================================
+# Production Stage
+# ============================================
+FROM node:20-alpine
+
+# Install security updates and dumb-init
+RUN apk update && apk upgrade && \
+    apk add --no-cache dumb-init
+
+# Set environment
+ENV NODE_ENV=production
+
+# Set working directory
+WORKDIR /app
+
+# Copy package files
+COPY package*.json ./
+
+# Install ONLY production dependencies
+RUN npm ci --only=production && \
+    npm cache clean --force
+
+# Copy built application from builder stage
+COPY --from=builder /app/dist ./dist
+
+# Create non-root user for security
+RUN addgroup -g 1001 -S nodejs && \
+    adduser -S nodejs -u 1001
+
+# Change ownership to non-root user
+RUN chown -R nodejs:nodejs /app
+
+# Switch to non-root user
+USER nodejs
+
+# Expose port (Cloud Run uses PORT env var)
+EXPOSE 8080
+
+# Health check for container orchestration
+HEALTHCHECK --interval=30s \
+            --timeout=3s \
+            --start-period=5s \
+            --retries=3 \
+  CMD node -e "fetch('http://localhost:8080/health').then(r => r.ok ? process.exit(0) : process.exit(1)).catch(() => process.exit(1))"
+
+# Use dumb-init to handle signals properly
+ENTRYPOINT ["dumb-init", "--"]
+
+# Start application
+CMD ["node", "dist/index.js"]

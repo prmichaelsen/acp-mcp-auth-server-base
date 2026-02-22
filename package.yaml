@@ -54,6 +54,22 @@ contents:
   designs:
     - name: mcp-auth-server-base.architecture.md
     - name: mcp-auth-server-base.security-considerations.md
+  
+  templates:
+    - name: config/tsconfig.json
+    - name: config/jest.config.js
+    - name: config/.dockerignore
+    - name: config/.env.example
+    - name: config/.gitignore
+    - name: docker/Dockerfile.development
+    - name: docker/Dockerfile.production
+    - name: deployment/cloudbuild.yaml
+    - name: src/index.ts.template
+    - name: src/auth/platform-jwt-provider.ts.template
+    - name: src/auth/platform-token-resolver.ts.template
+    - name: scripts/upload-secrets.ts
+    - name: scripts/test-auth.ts
+    - name: package/package.json.template
 
 # Compatibility
 requires:

@@ -7,7 +7,7 @@ project:
   type: package
   started: 2026-02-21
   status: in_progress
-  current_milestone: M2
+  current_milestone: M3
   description: |
     ACP Package: Use with MCP server projects that depend on @prmichaelsen/mcp-auth.
 
@@ -36,12 +36,12 @@ milestones:
   
   - id: M3
     name: Templates and Configuration Files
-    status: not_started
-    progress: 0
-    started: null
+    status: in_progress
+    progress: 93
+    started: 2026-02-22
     completed: null
     estimated_days: 3-4
-    tasks_completed: 0
+    tasks_completed: 14
     tasks_total: 15
     file: agent/milestones/milestone-3-templates-and-files.md
   
@@ -283,129 +283,157 @@ tasks:
   milestone_3:
     - id: task-22
       name: Create tsconfig.json Template
-      status: not_started
+      status: completed
       file: agent/tasks/milestone-3-templates-and-files/task-22-create-tsconfig.md
       estimated_hours: 2-3
-      completed_date: null
+      actual_hours: 1
+      completed_date: 2026-02-22
       notes: |
-        TypeScript configuration template for ES modules and strict type checking
+        ✅ Completed - Created TypeScript configuration template
+        ES2022 target, Node16 module resolution, strict mode enabled
     
     - id: task-23
       name: Create jest.config.js Template
-      status: not_started
+      status: completed
       file: agent/tasks/milestone-3-templates-and-files/task-23-create-jest-config.md
       estimated_hours: 2-3
-      completed_date: null
+      actual_hours: 1
+      completed_date: 2026-02-22
       notes: |
-        Jest configuration template with ES module support and colocated tests
+        ✅ Completed - Created Jest configuration template
+        ES module support with ts-jest, colocated tests, 70% coverage thresholds
     
     - id: task-24
       name: Create .dockerignore Template
-      status: not_started
+      status: completed
       file: agent/tasks/milestone-3-templates-and-files/task-24-create-dockerignore.md
       estimated_hours: 1
-      completed_date: null
+      actual_hours: 0.5
+      completed_date: 2026-02-22
       notes: |
-        Docker exclusion template for optimized builds
+        ✅ Completed - Created Docker exclusion template
+        Excludes node_modules, build outputs, secrets, tests, documentation
     
     - id: task-25
       name: Create .env.example Template
-      status: not_started
+      status: completed
       file: agent/tasks/milestone-3-templates-and-files/task-25-create-env-example.md
       estimated_hours: 2
-      completed_date: null
+      actual_hours: 1
+      completed_date: 2026-02-22
       notes: |
-        Environment variable template with all required and optional variables
+        ✅ Completed - Created environment variable template
+        Documents all required/optional variables with security warnings
     
     - id: task-26
       name: Create .gitignore Template
-      status: not_started
+      status: completed
       file: agent/tasks/milestone-3-templates-and-files/task-26-create-gitignore.md
       estimated_hours: 1
-      completed_date: null
+      actual_hours: 0.5
+      completed_date: 2026-02-22
       notes: |
-        Git exclusion template with security best practices
+        ✅ Completed - Created Git exclusion template
+        Critical security exclusions for .env files and secrets
     
     - id: task-27
       name: Create Dockerfile.development Template
-      status: not_started
+      status: completed
       file: agent/tasks/milestone-3-templates-and-files/task-27-create-dockerfile-development.md
       estimated_hours: 2-3
-      completed_date: null
+      actual_hours: 1
+      completed_date: 2026-02-22
       notes: |
-        Development Dockerfile with hot reloading and debugging support
+        ✅ Completed - Created development Dockerfile template
+        Single-stage build with hot reload support
     
     - id: task-28
       name: Create Dockerfile.production Template
-      status: not_started
+      status: completed
       file: agent/tasks/milestone-3-templates-and-files/task-28-create-dockerfile-production.md
       estimated_hours: 3-4
-      completed_date: null
+      actual_hours: 1
+      completed_date: 2026-02-22
       notes: |
-        Production Dockerfile with multi-stage builds and security hardening
+        ✅ Completed - Created production Dockerfile template
+        Multi-stage build, non-root user, health checks, security hardening
     
     - id: task-29
       name: Create cloudbuild.yaml Template
-      status: not_started
+      status: completed
       file: agent/tasks/milestone-3-templates-and-files/task-29-create-cloudbuild.md
       estimated_hours: 3-4
-      completed_date: null
+      actual_hours: 1
+      completed_date: 2026-02-22
       notes: |
-        Cloud Build configuration with testing and deployment pipeline
+        ✅ Completed - Created Cloud Build configuration template
+        Complete CI/CD pipeline with tests, build, push, deploy steps
     
     - id: task-30
       name: Create src/index.ts Template
-      status: not_started
+      status: completed
       file: agent/tasks/milestone-3-templates-and-files/task-30-create-index-template.md
       estimated_hours: 4-5
-      completed_date: null
+      actual_hours: 2
+      completed_date: 2026-02-22
       notes: |
-        Main server entry point template with wrapServer configuration
+        ✅ Completed - Created main server entry point template
+        Demonstrates wrapServer with placeholders for customization
     
     - id: task-31
       name: Create platform-jwt-provider.ts Template
-      status: not_started
+      status: completed
       file: agent/tasks/milestone-3-templates-and-files/task-31-create-jwt-provider-template.md
       estimated_hours: 3-4
-      completed_date: null
+      actual_hours: 1
+      completed_date: 2026-02-22
       notes: |
-        JWT authentication provider template with caching
+        ✅ Completed - Created JWT authentication provider template
+        Includes token caching, validation, and error handling
     
     - id: task-32
       name: Create platform-token-resolver.ts Template
-      status: not_started
+      status: completed
       file: agent/tasks/milestone-3-templates-and-files/task-32-create-token-resolver-template.md
       estimated_hours: 3-4
-      completed_date: null
+      actual_hours: 1
+      completed_date: 2026-02-22
       notes: |
-        Token resolver template for dynamic credential fetching
+        ✅ Completed - Created token resolver template
+        Fetches user credentials from platform API with caching
     
     - id: task-33
       name: Create upload-secrets.ts Script
-      status: not_started
+      status: completed
       file: agent/tasks/milestone-3-templates-and-files/task-33-create-upload-secrets-script.md
       estimated_hours: 3-4
-      completed_date: null
+      actual_hours: 2
+      completed_date: 2026-02-22
       notes: |
-        Utility script for uploading secrets to Secret Manager
+        ✅ Completed - Created secret upload utility script
+        Reads .env and uploads to Secret Manager with naming convention
     
     - id: task-34
       name: Create test-auth.ts Script
-      status: not_started
+      status: completed
       file: agent/tasks/milestone-3-templates-and-files/task-34-create-test-auth-script.md
       estimated_hours: 2-3
-      completed_date: null
+      actual_hours: 1
+      completed_date: 2026-02-22
       notes: |
-        Utility script for testing authentication configuration locally
+        ✅ Completed - Created auth testing utility script
+        Generates test tokens and validates authentication setup
     
     - id: task-35
       name: Create package.json Template
-      status: not_started
+      status: completed
       file: agent/tasks/milestone-3-templates-and-files/task-35-create-package-json-template.md
       estimated_hours: 2-3
-      completed_date: null
+      actual_hours: 1
+      completed_date: 2026-02-22
       notes: |
-        Package manifest template with dependencies and scripts
+        ✅ Completed - Created package manifest template
+        Includes all dependencies, scripts, and configuration
     
     - id: task-36
       name: Test All Templates

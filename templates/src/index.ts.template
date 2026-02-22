@@ -1,0 +1,118 @@
+#!/usr/bin/env node
+/**
+ * {{SERVICE_NAME}} - MCP Server with Authentication
+ * 
+ * This server is wrapped with @prmichaelsen/mcp-auth for authentication and multi-tenancy.
+ * Server Type: {{SERVER_TYPE}}
+ * Auth Provider: {{AUTH_PROVIDER}}
+ */
+
+import { Server } from '@modelcontextprotocol/sdk/server/index.js';
+import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
+import { wrapServer } from '@prmichaelsen/mcp-auth';
+import { createJwtProvider } from './auth/platform-jwt-provider.js';
+// {{CONDITIONAL_IMPORTS}}
+
+// Environment configuration
+const PORT = parseInt(process.env.PORT || '8080', 10);
+const NODE_ENV = process.env.NODE_ENV || 'development';
+const CORS_ORIGIN = process.env.CORS_ORIGIN;
+const PLATFORM_URL = process.env.PLATFORM_URL;
+const PLATFORM_SERVICE_TOKEN = process.env.PLATFORM_SERVICE_TOKEN;
+
+// Validate required environment variables
+if (!CORS_ORIGIN) {
+  throw new Error('CORS_ORIGIN environment variable is required');
+}
+
+// {{CONDITIONAL_ENV_VALIDATION}}
+
+/**
+ * Create the base MCP server with tools
+ */
+function createMCPServer(): Server {
+  const server = new Server(
+    {
+      name: '{{SERVICE_NAME}}',
+      version: '{{SERVICE_VERSION}}',
+    },
+    {
+      capabilities: {
+        tools: {},
+        // {{ADDITIONAL_CAPABILITIES}}
+      },
+    }
+  );
+
+  // {{TOOL_IMPLEMENTATIONS}}
+  // Add your tool implementations here
+  // Example:
+  // server.setRequestHandler(ListToolsRequestSchema, async () => ({
+  //   tools: [
+  //     {
+  //       name: 'example_tool',
+  //       description: 'An example tool',
+  //       inputSchema: {
+  //         type: 'object',
+  //         properties: {},
+  //       },
+  //     },
+  //   ],
+  // }));
+
+  return server;
+}
+
+/**
+ * Main server initialization
+ */
+async function main() {
+  try {
+    const mcpServer = createMCPServer();
+
+    // Wrap server with authentication
+    const wrappedServer = wrapServer({
+      server: mcpServer,
+      serverType: '{{SERVER_TYPE}}',
+      authProvider: createJwtProvider(),
+      // {{CONDITIONAL_TOKEN_RESOLVER}}
+      corsOrigin: CORS_ORIGIN,
+      port: PORT,
+      healthCheck: {
+        enabled: true,
+        path: '/health',
+      },
+      logging: {
+        level: process.env.LOG_LEVEL || 'info',
+        format: process.env.LOG_FORMAT || 'json',
+      },
+    });
+
+    // Start the server
+    await wrappedServer.start();
+    
+    console.log(`{{SERVICE_NAME}} started successfully`);
+    console.log(`Environment: ${NODE_ENV}`);
+    console.log(`Port: ${PORT}`);
+    console.log(`CORS Origin: ${CORS_ORIGIN}`);
+    console.log(`Server Type: {{SERVER_TYPE}}`);
+    console.log(`Health Check: http://localhost:${PORT}/health`);
+  } catch (error) {
+    console.error('Failed to start server:', error);
+    process.exit(1);
+  }
+}
+
+// Handle graceful shutdown
+process.on('SIGTERM', () => {
+  console.log('SIGTERM received, shutting down gracefully');
+  process.exit(0);
+});
+
+process.on('SIGINT', () => {
+  console.log('SIGINT received, shutting down gracefully');
+  process.exit(0);
+});
+
+// Start the server
+main();

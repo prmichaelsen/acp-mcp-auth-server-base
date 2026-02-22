@@ -1,0 +1,77 @@
+/**
+ * JWT Authentication Provider
+ * 
+ * Validates JWT tokens issued by the platform.
+ * Tokens must be signed with JWT_SECRET and include 'sub' claim for user ID.
+ */
+
+import jwt from 'jsonwebtoken';
+import { AuthProvider } from '@prmichaelsen/mcp-auth';
+
+// Token cache for performance (5 minute TTL)
+const tokenCache = new Map<string, { userId: string; expires: number }>();
+const CACHE_TTL = 5 * 60 * 1000; // 5 minutes
+
+export function createJwtProvider(): AuthProvider {
+  const secret = process.env.JWT_SECRET;
+  if (!secret) {
+    throw new Error('JWT_SECRET environment variable is required');
+  }
+
+  const issuer = process.env.JWT_ISSUER;
+  const audience = process.env.JWT_AUDIENCE;
+
+  return {
+    async authenticate(token: string) {
+      // Check cache first
+      const cached = tokenCache.get(token);
+      if (cached && cached.expires > Date.now()) {
+        return { userId: cached.userId };
+      }
+
+      try {
+        // Verify JWT token
+        const decoded = jwt.verify(token, secret, {
+          issuer: issuer || undefined,
+          audience: audience || undefined,
+        }) as { sub: string; [key: string]: any };
+
+        if (!decoded.sub) {
+          throw new Error('Token missing sub claim');
+        }
+
+        // Cache the result
+        tokenCache.set(token, {
+          userId: decoded.sub,
+          expires: Date.now() + CACHE_TTL,
+        });
+
+        // Clean expired cache entries periodically
+        if (tokenCache.size > 1000) {
+          const now = Date.now();
+          for (const [key, value] of tokenCache.entries()) {
+            if (value.expires < now) {
+              tokenCache.delete(key);
+            }
+          }
+        }
+
+        return {
+          userId: decoded.sub,
+          metadata: decoded,
+        };
+      } catch (error) {
+        // Clear from cache on error
+        tokenCache.delete(token);
+        
+        if (error instanceof jwt.JsonWebTokenError) {
+          throw new Error('Invalid JWT token');
+        } else if (error instanceof jwt.TokenExpiredError) {
+          throw new Error('JWT token expired');
+        } else {
+          throw new Error('JWT authentication failed');
+        }
+      }
+    },
+  };
+}

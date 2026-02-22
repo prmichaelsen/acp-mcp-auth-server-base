@@ -1,0 +1,49 @@
+{
+  "name": "{{SERVICE_NAME}}",
+  "version": "{{SERVICE_VERSION}}",
+  "description": "{{SERVICE_DESCRIPTION}}",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "{{SERVICE_NAME}}": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint src --ext .ts",
+    "upload-secrets": "tsx scripts/upload-secrets.ts",
+    "test-auth": "tsx scripts/test-auth.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "@prmichaelsen/mcp-auth": "^1.0.0",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/node": "^20.0.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "auth",
+    "authentication",
+    "{{SERVICE_KEYWORDS}}"
+  ],
+  "author": "{{AUTHOR_NAME}}",
+  "license": "MIT"
+}

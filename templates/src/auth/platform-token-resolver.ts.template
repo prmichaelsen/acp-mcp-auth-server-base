@@ -1,0 +1,84 @@
+/**
+ * Platform Token Resolver
+ * 
+ * Fetches user-specific credentials from the platform API.
+ * Used for dynamic servers that need per-user access tokens.
+ */
+
+import { TokenResolver } from '@prmichaelsen/mcp-auth';
+
+// Token cache for performance (5 minute TTL)
+const credentialsCache = new Map<string, { token: string; expires: number }>();
+const CACHE_TTL = 5 * 60 * 1000; // 5 minutes
+
+export function createTokenResolver(): TokenResolver {
+  const platformUrl = process.env.PLATFORM_URL;
+  const serviceToken = process.env.PLATFORM_SERVICE_TOKEN;
+
+  if (!platformUrl || !serviceToken) {
+    throw new Error('PLATFORM_URL and PLATFORM_SERVICE_TOKEN environment variables are required');
+  }
+
+  return {
+    async resolveToken(userId: string, platformJwt: string) {
+      // Check cache first
+      const cacheKey = `${userId}:${platformJwt}`;
+      const cached = credentialsCache.get(cacheKey);
+      if (cached && cached.expires > Date.now()) {
+        return cached.token;
+      }
+
+      try {
+        // Fetch credentials from platform API
+        const response = await fetch(`${platformUrl}/api/v1/credentials/${userId}`, {
+          method: 'GET',
+          headers: {
+            'Authorization': `Bearer ${platformJwt}`,
+            'X-Service-Token': serviceToken,
+            'Content-Type': 'application/json',
+          },
+        });
+
+        if (!response.ok) {
+          if (response.status === 404) {
+            // User has no credentials configured
+            return undefined;
+          }
+          throw new Error(`Platform API error: ${response.status}`);
+        }
+
+        const data = await response.json();
+        const accessToken = data.access_token;
+
+        if (!accessToken) {
+          return undefined;
+        }
+
+        // Cache the token
+        credentialsCache.set(cacheKey, {
+          token: accessToken,
+          expires: Date.now() + CACHE_TTL,
+        });
+
+        // Clean expired cache entries periodically
+        if (credentialsCache.size > 1000) {
+          const now = Date.now();
+          for (const [key, value] of credentialsCache.entries()) {
+            if (value.expires < now) {
+              credentialsCache.delete(key);
+            }
+          }
+        }
+
+        return accessToken;
+      } catch (error) {
+        // Clear from cache on error
+        credentialsCache.delete(cacheKey);
+        
+        console.error(`Failed to resolve token for user ${userId}:`, error);
+        // Return undefined to allow graceful degradation
+        return undefined;
+      }
+    },
+  };
+}
