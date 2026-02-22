@@ -164,6 +164,7 @@ tasks:
       status: completed
       file: agent/tasks/milestone-2-commands-and-automation/task-11-create-init-command.md
       estimated_hours: 4-5
+      actual_hours: 4
       completed_date: 2026-02-22
       notes: |
         ✅ Completed - Created comprehensive init command (1500+ lines)
@@ -174,6 +175,7 @@ tasks:
       status: completed
       file: agent/tasks/milestone-2-commands-and-automation/task-12-create-validate-command.md
       estimated_hours: 3-4
+      actual_hours: 4
       completed_date: 2026-02-22
       notes: |
         ✅ Completed - Created comprehensive validate command and script
@@ -185,6 +187,7 @@ tasks:
       status: completed
       file: agent/tasks/milestone-2-commands-and-automation/task-13-create-deploy-command.md
       estimated_hours: 4-5
+      actual_hours: 4
       completed_date: 2026-02-22
       notes: |
         ✅ Completed - Created comprehensive deploy command (1200+ lines)
@@ -195,6 +198,7 @@ tasks:
       status: completed
       file: agent/tasks/milestone-2-commands-and-automation/task-14-create-setup-secrets-command.md
       estimated_hours: 3-4
+      actual_hours: 3
       completed_date: 2026-02-22
       notes: |
         ✅ Completed - Created comprehensive setup-secrets command (900+ lines)
@@ -205,6 +209,7 @@ tasks:
       status: completed
       file: agent/tasks/milestone-2-commands-and-automation/task-15-create-logs-command.md
       estimated_hours: 2-3
+      actual_hours: 2
       completed_date: 2026-02-22
       notes: |
         ✅ Completed - Created comprehensive logs command (650+ lines)
@@ -215,9 +220,10 @@ tasks:
       status: completed
       file: agent/tasks/milestone-2-commands-and-automation/task-16-create-generate-dockerfile-command.md
       estimated_hours: 2-3
+      actual_hours: 2
       completed_date: 2026-02-22
       notes: |
-        ✅ Completed - Created comprehensive generate-dockerfile command
+        ✅ Completed - Created comprehensive generate-dockerfile command (1096 lines)
         Generates Dockerfile.development, Dockerfile.production, and .dockerignore
     
     - id: task-17
