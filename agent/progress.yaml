@@ -270,11 +270,256 @@ tasks:
         Quality gate for Milestone 2
         Manual testing of all 10 commands with comprehensive test report
 
+  milestone_3:
+    - id: task-22
+      name: Create tsconfig.json Template
+      status: not_started
+      file: agent/tasks/milestone-3-templates-and-files/task-22-create-tsconfig.md
+      estimated_hours: 2-3
+      completed_date: null
+      notes: |
+        TypeScript configuration template for ES modules and strict type checking
+    
+    - id: task-23
+      name: Create jest.config.js Template
+      status: not_started
+      file: agent/tasks/milestone-3-templates-and-files/task-23-create-jest-config.md
+      estimated_hours: 2-3
+      completed_date: null
+      notes: |
+        Jest configuration template with ES module support and colocated tests
+    
+    - id: task-24
+      name: Create .dockerignore Template
+      status: not_started
+      file: agent/tasks/milestone-3-templates-and-files/task-24-create-dockerignore.md
+      estimated_hours: 1
+      completed_date: null
+      notes: |
+        Docker exclusion template for optimized builds
+    
+    - id: task-25
+      name: Create .env.example Template
+      status: not_started
+      file: agent/tasks/milestone-3-templates-and-files/task-25-create-env-example.md
+      estimated_hours: 2
+      completed_date: null
+      notes: |
+        Environment variable template with all required and optional variables
+    
+    - id: task-26
+      name: Create .gitignore Template
+      status: not_started
+      file: agent/tasks/milestone-3-templates-and-files/task-26-create-gitignore.md
+      estimated_hours: 1
+      completed_date: null
+      notes: |
+        Git exclusion template with security best practices
+    
+    - id: task-27
+      name: Create Dockerfile.development Template
+      status: not_started
+      file: agent/tasks/milestone-3-templates-and-files/task-27-create-dockerfile-development.md
+      estimated_hours: 2-3
+      completed_date: null
+      notes: |
+        Development Dockerfile with hot reloading and debugging support
+    
+    - id: task-28
+      name: Create Dockerfile.production Template
+      status: not_started
+      file: agent/tasks/milestone-3-templates-and-files/task-28-create-dockerfile-production.md
+      estimated_hours: 3-4
+      completed_date: null
+      notes: |
+        Production Dockerfile with multi-stage builds and security hardening
+    
+    - id: task-29
+      name: Create cloudbuild.yaml Template
+      status: not_started
+      file: agent/tasks/milestone-3-templates-and-files/task-29-create-cloudbuild.md
+      estimated_hours: 3-4
+      completed_date: null
+      notes: |
+        Cloud Build configuration with testing and deployment pipeline
+    
+    - id: task-30
+      name: Create src/index.ts Template
+      status: not_started
+      file: agent/tasks/milestone-3-templates-and-files/task-30-create-index-template.md
+      estimated_hours: 4-5
+      completed_date: null
+      notes: |
+        Main server entry point template with wrapServer configuration
+    
+    - id: task-31
+      name: Create platform-jwt-provider.ts Template
+      status: not_started
+      file: agent/tasks/milestone-3-templates-and-files/task-31-create-jwt-provider-template.md
+      estimated_hours: 3-4
+      completed_date: null
+      notes: |
+        JWT authentication provider template with caching
+    
+    - id: task-32
+      name: Create platform-token-resolver.ts Template
+      status: not_started
+      file: agent/tasks/milestone-3-templates-and-files/task-32-create-token-resolver-template.md
+      estimated_hours: 3-4
+      completed_date: null
+      notes: |
+        Token resolver template for dynamic credential fetching
+    
+    - id: task-33
+      name: Create upload-secrets.ts Script
+      status: not_started
+      file: agent/tasks/milestone-3-templates-and-files/task-33-create-upload-secrets-script.md
+      estimated_hours: 3-4
+      completed_date: null
+      notes: |
+        Utility script for uploading secrets to Secret Manager
+    
+    - id: task-34
+      name: Create test-auth.ts Script
+      status: not_started
+      file: agent/tasks/milestone-3-templates-and-files/task-34-create-test-auth-script.md
+      estimated_hours: 2-3
+      completed_date: null
+      notes: |
+        Utility script for testing authentication configuration locally
+    
+    - id: task-35
+      name: Create package.json Template
+      status: not_started
+      file: agent/tasks/milestone-3-templates-and-files/task-35-create-package-json-template.md
+      estimated_hours: 2-3
+      completed_date: null
+      notes: |
+        Package manifest template with dependencies and scripts
+    
+    - id: task-36
+      name: Test All Templates
+      status: not_started
+      file: agent/tasks/milestone-3-templates-and-files/task-36-test-all-templates.md
+      estimated_hours: 4-6
+      completed_date: null
+      notes: |
+        Quality gate for Milestone 3 - test all templates in isolated project
+
+  milestone_4:
+    - id: task-37
+      name: Create User Milestone Templates
+      status: not_started
+      file: agent/tasks/milestone-4-package-finalization/task-37-create-user-milestone-templates.md
+      estimated_hours: 4-5
+      completed_date: null
+      notes: |
+        Create 4 user-facing milestone templates for guiding users
+    
+    - id: task-38
+      name: Create User Task Templates
+      status: not_started
+      file: agent/tasks/milestone-4-package-finalization/task-38-create-user-task-templates.md
+      estimated_hours: 6-8
+      completed_date: null
+      notes: |
+        Create 11 user-facing task templates with step-by-step instructions
+    
+    - id: task-39
+      name: Update package.yaml with All Content
+      status: not_started
+      file: agent/tasks/milestone-4-package-finalization/task-39-update-package-yaml.md
+      estimated_hours: 2-3
+      completed_date: null
+      notes: |
+        Add all patterns, commands, designs, milestones, tasks, and templates to package.yaml
+    
+    - id: task-40
+      name: Update README.md
+      status: not_started
+      file: agent/tasks/milestone-4-package-finalization/task-40-update-readme.md
+      estimated_hours: 3-4
+      completed_date: null
+      notes: |
+        Complete usage instructions, examples, and documentation
+    
+    - id: task-41
+      name: Update CHANGELOG.md
+      status: not_started
+      file: agent/tasks/milestone-4-package-finalization/task-41-update-changelog.md
+      estimated_hours: 1-2
+      completed_date: null
+      notes: |
+        Document v1.0.0 release with all features
+    
+    - id: task-42
+      name: Test Bootstrap Installation
+      status: not_started
+      file: agent/tasks/milestone-4-package-finalization/task-42-test-bootstrap-installation.md
+      estimated_hours: 2-3
+      completed_date: null
+      notes: |
+        Test one-command installation via bootstrap.sh
+    
+    - id: task-43
+      name: Test Package Installation via ACP
+      status: not_started
+      file: agent/tasks/milestone-4-package-finalization/task-43-test-package-installation.md
+      estimated_hours: 2-3
+      completed_date: null
+      notes: |
+        Test installation via @acp.package-install command
+    
+    - id: task-44
+      name: Validate All Commands
+      status: not_started
+      file: agent/tasks/milestone-4-package-finalization/task-44-validate-all-commands.md
+      estimated_hours: 3-4
+      completed_date: null
+      notes: |
+        Execute all 10 commands in installed project to verify functionality
+    
+    - id: task-45
+      name: Run Package Validation
+      status: not_started
+      file: agent/tasks/milestone-4-package-finalization/task-45-run-package-validation.md
+      estimated_hours: 2-3
+      completed_date: null
+      notes: |
+        Run @acp.package-validate to ensure package is correct
+    
+    - id: task-46
+      name: Test User Workflow End-to-End
+      status: not_started
+      file: agent/tasks/milestone-4-package-finalization/task-46-test-user-workflow.md
+      estimated_hours: 4-6
+      completed_date: null
+      notes: |
+        Test complete user workflow from installation through deployment
+    
+    - id: task-47
+      name: Fix Any Issues Found
+      status: not_started
+      file: agent/tasks/milestone-4-package-finalization/task-47-fix-issues.md
+      estimated_hours: 4-8
+      completed_date: null
+      notes: |
+        Address all issues found during testing phases
+    
+    - id: task-48
+      name: Final Review and Documentation Check
+      status: not_started
+      file: agent/tasks/milestone-4-package-finalization/task-48-final-review.md
+      estimated_hours: 3-4
+      completed_date: null
+      notes: |
+        Final quality gate before v1.0.0 release
+
 documentation:
   design_documents: 4
   milestone_documents: 4
   pattern_documents: 18
-  task_documents: 21
+  task_documents: 48
   command_documents: 1
   clarification_documents: 1
   last_updated: 2026-02-22
@@ -287,6 +532,26 @@ progress:
   overall: 100
 
 recent_work:
+  - date: 2026-02-22
+    description: |
+      ✅ Planning Complete - Created 27 Task Documents via @acp.plan
+      📋 M3: Templates and Configuration Files (15 tasks planned)
+      📋 M4: Package Finalization and Testing (12 tasks planned)
+      All task documents created in new milestone-based directory structure.
+    items:
+      - ✅ Executed @acp.plan command in batch mode
+      - ✅ Created 15 task documents for Milestone 3 (Tasks 22-36)
+      - ✅ Created 12 task documents for Milestone 4 (Tasks 37-48)
+      - ✅ Organized tasks in milestone-specific directories:
+      - ✅   agent/tasks/milestone-3-templates-and-files/ (15 tasks)
+      - ✅   agent/tasks/milestone-4-package-finalization/ (12 tasks)
+      - ✅ M3 tasks cover: config files, Docker files, source templates, scripts, package.json
+      - ✅ M4 tasks cover: user milestones/tasks, package.yaml, README, testing, validation
+      - ✅ Updated progress.yaml with all 27 new tasks
+      - ✅ Updated documentation count (task_documents: 21 → 48)
+      - ✅ Total estimated time: M3 ~40-50 hours, M4 ~35-45 hours
+      - 📋 All milestones now have complete task documentation
+      - 📋 Ready to continue with Milestone 2 implementation (Task 12)
   - date: 2026-02-22
     description: |
       ✅ Task 11 Complete - Create @mcp-auth-server-base.init Command
