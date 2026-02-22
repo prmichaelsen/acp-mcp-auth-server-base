@@ -26,12 +26,12 @@ milestones:
   - id: M2
     name: Commands and Automation
     status: in_progress
-    progress: 9
+    progress: 18
     started: 2026-02-22
     completed: null
     estimated_days: 3-4
-    tasks_completed: 1
-    tasks_total: 21
+    tasks_completed: 2
+    tasks_total: 11
     file: agent/milestones/milestone-2-commands-and-automation.md
   
   - id: M3
@@ -171,13 +171,14 @@ tasks:
     
     - id: task-12
       name: Create @mcp-auth-server-base.validate Command
-      status: not_started
+      status: completed
       file: agent/tasks/milestone-2-commands-and-automation/task-12-create-validate-command.md
       estimated_hours: 3-4
-      completed_date: null
+      completed_date: 2026-02-22
       notes: |
-        Validates project configuration, dependencies, and structure
-        Ensures projects are ready for development and deployment
+        ✅ Completed - Created comprehensive validate command and script
+        Created validation script (900+ lines) with systematic checks
+        Command document (1100+ lines) with detailed instructions
     
     - id: task-13
       name: Create @mcp-auth-server-base.deploy Command
@@ -519,7 +520,8 @@ documentation:
   milestone_documents: 4
   pattern_documents: 18
   task_documents: 48
-  command_documents: 1
+  command_documents: 2
+  script_documents: 1
   clarification_documents: 1
   last_updated: 2026-02-22
 
@@ -531,6 +533,29 @@ progress:
   overall: 100
 
 recent_work:
+  - date: 2026-02-22
+    description: |
+      ✅ Task 12 Complete - Create @mcp-auth-server-base.validate Command
+      ✅ Milestone 2 Progress - Commands and Automation (18% complete, 2/11 tasks)
+      Created comprehensive validation system with script and command document.
+    items:
+      - ✅ Created agent/scripts/mcp-auth-server-base.validate.sh (900+ lines)
+      - ✅ Validation script sources acp.common.sh for color utilities
+      - ✅ Script performs 10 validation categories (files, deps, config, env, TS, build, tests, auth, Docker, Cloud Build)
+      - ✅ Three validation levels: quick (~30s), standard (~2-3m), full (~5-10m)
+      - ✅ Color-coded output: ✓ green (pass), ✗ red (fail), ⚠ yellow (warn), ℹ blue (info)
+      - ✅ Comprehensive validation report with success rate percentage
+      - ✅ Automatic remediation suggestions for failures
+      - ✅ Exit codes: 0 (success), 1 (critical failure), 2 (warnings)
+      - ✅ Created agent/commands/mcp-auth-server-base.validate.md (1100+ lines)
+      - ✅ Command document explains validation levels and usage
+      - ✅ Includes 9 troubleshooting scenarios
+      - ✅ Security considerations documented (read-only, never displays secrets)
+      - ✅ Script made executable (chmod +x)
+      - ✅ Updated package.yaml with validate command and script
+      - ✅ Updated progress.yaml (M2: 18% complete, 2/11 tasks done)
+      - ✅ Milestone 2 IN PROGRESS
+      - 📋 Ready for Task 13: Create @mcp-auth-server-base.deploy command
   - date: 2026-02-22
     description: |
       ✅ Planning Complete - Created 27 Task Documents via @acp.plan
@@ -806,8 +831,8 @@ recent_work:
       - 📋 Ready to add content with entity creation commands
 
 next_steps:
-  - Implement Task 12: @mcp-auth-server-base.validate command
   - Implement Task 13: @mcp-auth-server-base.deploy command
+  - Implement Task 14: @mcp-auth-server-base.setup-secrets command
   - Implement Tasks 14-18: Deployment and generation commands
   - Implement Tasks 19-20: Maintenance commands
   - Execute Task 21: Test all commands manually (quality gate)
