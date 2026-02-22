@@ -542,13 +542,13 @@ recent_work:
       - 📋 Ready to add content with entity creation commands
 
 next_steps:
-  - Create Task 12: @mcp-auth-server-base.validate command
-  - Create Task 13: @mcp-auth-server-base.deploy command
-  - Create Task 14: @mcp-auth-server-base.setup-secrets command
-  - Create Task 15: @mcp-auth-server-base.logs command
-  - Continue with remaining Milestone 2 commands (generation, maintenance)
-  - After M2 complete, proceed to Milestone 3 (Templates)
-  - Finalize and test in Milestone 4
+  - Implement Task 12: @mcp-auth-server-base.validate command
+  - Implement Task 13: @mcp-auth-server-base.deploy command
+  - Implement Tasks 14-18: Deployment and generation commands
+  - Implement Tasks 19-20: Maintenance commands
+  - Execute Task 21: Test all commands manually (quality gate)
+  - Complete Milestone 2 (21/21 tasks)
+  - Proceed to Milestone 3: Templates and Configuration Files
 
 notes:
   - This is an ACP package repository
