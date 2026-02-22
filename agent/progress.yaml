@@ -31,7 +31,7 @@ milestones:
     completed: null
     estimated_days: 3-4
     tasks_completed: 1
-    tasks_total: 13
+    tasks_total: 21
     file: agent/milestones/milestone-2-commands-and-automation.md
   
   - id: M3
@@ -189,12 +189,92 @@ tasks:
       notes: |
         Deploys MCP auth server to Google Cloud Run
         Handles Docker build, push, and Cloud Run deployment
+    
+    - id: task-14
+      name: Create @mcp-auth-server-base.setup-secrets Command
+      status: not_started
+      file: agent/tasks/task-14-create-setup-secrets-command.md
+      estimated_hours: 3-4
+      completed_date: null
+      notes: |
+        Helps users set up secrets in Google Cloud Secret Manager
+        Guides through creating and uploading secrets for deployment
+    
+    - id: task-15
+      name: Create @mcp-auth-server-base.logs Command
+      status: not_started
+      file: agent/tasks/task-15-create-logs-command.md
+      estimated_hours: 2-3
+      completed_date: null
+      notes: |
+        Fetches and displays logs from deployed Cloud Run service
+        Supports filtering by severity, time, and search terms
+    
+    - id: task-16
+      name: Create @mcp-auth-server-base.generate-dockerfile Command
+      status: not_started
+      file: agent/tasks/task-16-create-generate-dockerfile-command.md
+      estimated_hours: 2-3
+      completed_date: null
+      notes: |
+        Generates or regenerates Dockerfile configurations
+        Supports development and production multi-stage builds
+    
+    - id: task-17
+      name: Create @mcp-auth-server-base.generate-cloudbuild Command
+      status: not_started
+      file: agent/tasks/task-17-create-generate-cloudbuild-command.md
+      estimated_hours: 3-4
+      completed_date: null
+      notes: |
+        Generates cloudbuild.yaml for CI/CD pipeline
+        Supports multiple environments and test integration
+    
+    - id: task-18
+      name: Create @mcp-auth-server-base.add-auth-provider Command
+      status: not_started
+      file: agent/tasks/task-18-create-add-auth-provider-command.md
+      estimated_hours: 3-4
+      completed_date: null
+      notes: |
+        Adds additional authentication provider to existing project
+        Supports multi-provider configurations
+    
+    - id: task-19
+      name: Create @mcp-auth-server-base.mcp-auth-version-check Command
+      status: not_started
+      file: agent/tasks/task-19-create-mcp-auth-version-check-command.md
+      estimated_hours: 2-3
+      completed_date: null
+      notes: |
+        Checks current mcp-auth version against latest
+        Displays changelog and breaking changes
+    
+    - id: task-20
+      name: Create @mcp-auth-server-base.mcp-auth-version-update Command
+      status: not_started
+      file: agent/tasks/task-20-create-mcp-auth-version-update-command.md
+      estimated_hours: 3-4
+      completed_date: null
+      notes: |
+        Updates mcp-auth library to latest version
+        Handles migrations and breaking changes
+    
+    - id: task-21
+      name: Test All Commands Manually
+      status: not_started
+      file: agent/tasks/task-21-test-all-commands.md
+      estimated_hours: 4-6
+      completed_date: null
+      notes: |
+        Quality gate for Milestone 2
+        Manual testing of all 10 commands with comprehensive test report
 
 documentation:
   design_documents: 4
   milestone_documents: 4
   pattern_documents: 18
-  task_documents: 13
+  task_documents: 21
   command_documents: 1
   clarification_documents: 1
   last_updated: 2026-02-22
